@@ -9,6 +9,8 @@ before_install:
  - echo "start creating an image with dockerfile"
  - docker build -t react-app -f Dockerfile.dev .
 
+# react app test
+# 결과를 상세히 보기 위한 --coverage
 script:
  - docker run -e CI=true react-app npm run test -- --coverage
 
